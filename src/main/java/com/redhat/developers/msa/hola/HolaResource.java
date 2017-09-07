@@ -55,7 +55,7 @@ public class HolaResource {
         String hostname = System.getenv().getOrDefault("HOSTNAME", "unknown");
         String translation = ConfigResolver
             .resolve("hello")
-            .withDefault("Hola de %s")
+            .withDefault("¡Hola! de %s")
             .logChanges(true)
             // 5 Seconds cache only for demo purpose
             .cacheFor(TimeUnit.SECONDS, 5)
